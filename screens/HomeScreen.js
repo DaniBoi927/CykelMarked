@@ -36,7 +36,7 @@ export default function HomeScreen({ navigation }) {
           </View>
           <View style={GS.featureCard}>
             <Text style={GS.featureIcon}>2</Text>
-            <Text style={GS.featureTitle}>Sælg nemt dit grej</Text>
+            <Text style={GS.featureTitle}>Sælg dit grej nem</Text>
             <Text style={GS.featureText}>Opret en annonce med pris, stand og størrelse.</Text>
           </View>
         </View>
