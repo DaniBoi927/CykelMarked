@@ -1,10 +1,11 @@
-import { ScrollView, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AppButton from "../components/AppButton";
 import { GS } from "../styles/GlobalStyle";
 
 export default function ListingDetailsScreen({ route }) {
   const listing = route?.params?.listing;
+  const imageSource = listing?.image || (listing?.imageUrl ? { uri: listing.imageUrl } : null);
 
   if (!listing) {
     return (
@@ -19,6 +20,9 @@ export default function ListingDetailsScreen({ route }) {
   return (
     <SafeAreaView style={GS.container}>
       <ScrollView contentContainerStyle={GS.screen}>
+        {imageSource ? (
+          <Image source={imageSource} style={GS.detailsImage} />
+        ) : null}
         <Text style={GS.title}>{listing.title}</Text>
         <Text style={GS.price}>{listing.price} kr.</Text>
 

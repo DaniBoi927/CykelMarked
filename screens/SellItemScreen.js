@@ -10,6 +10,7 @@ const initialState = {
   size: "",
   condition: "",
   price: "",
+  imageUrl: "",
   description: "",
 };
 
@@ -19,6 +20,7 @@ const labels = {
   size: "Størrelse",
   condition: "Stand",
   price: "Pris",
+  imageUrl: "Billede-link",
   description: "Beskrivelse",
 };
 
