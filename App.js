@@ -14,6 +14,7 @@ import { Farver } from "./styles/GlobalStyle";
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
+// Stacken gør det muligt at gå fra annoncelisten til en detaljeside.
 function MarketplaceStack() {
   return (
     <Stack.Navigator>
@@ -38,6 +39,7 @@ export default function App() {
         <Tab.Navigator
           screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
+              // Vælger ikon ud fra hvilken tab brugeren står på.
               let iconName = "ellipse-outline";
 
               if (route.name === "Forside") {

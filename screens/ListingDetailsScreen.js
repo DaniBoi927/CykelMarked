@@ -4,6 +4,7 @@ import AppButton from "../components/AppButton";
 import { GS } from "../styles/GlobalStyle";
 
 export default function ListingDetailsScreen({ route }) {
+  // Annoncen kommer fra MarketplaceScreen via navigation.
   const listing = route?.params?.listing;
   const imageSource = listing?.image || (listing?.imageUrl ? { uri: listing.imageUrl } : null);
 

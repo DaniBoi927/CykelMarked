@@ -5,6 +5,7 @@ import AppButton from "../components/AppButton";
 import { GS } from "../styles/GlobalStyle";
 
 const initialState = {
+  // Felterne bruges til formularen på Sælg-siden.
   title: "",
   category: "",
   size: "",
@@ -27,11 +28,13 @@ const labels = {
 export default function SellItemScreen() {
   const [form, setForm] = useState(initialState);
 
+  // Opdaterer et formularfelt ad gangen.
   const updateField = (key, value) => {
     setForm((current) => ({ ...current, [key]: value }));
   };
 
   const submitListing = () => {
+    // Simpel validering før annoncen "oprettes".
     if (!form.title.trim() || !form.price.trim()) {
       Alert.alert("Udfyld mindst titel og pris.");
       return;

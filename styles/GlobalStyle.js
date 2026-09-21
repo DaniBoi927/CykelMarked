@@ -12,6 +12,7 @@ export const Farver = {
 };
 
 export const GS = StyleSheet.create({
+  // Fælles layout
   container: {
     flex: 1,
     backgroundColor: Farver.baggrund,
@@ -78,6 +79,7 @@ export const GS = StyleSheet.create({
     fontSize: 16,
     fontWeight: "800",
   },
+  // Forside
   hero: {
     backgroundColor: Farver.primær,
     borderRadius: 8,
@@ -169,6 +171,7 @@ export const GS = StyleSheet.create({
     color: Farver.muted,
     lineHeight: 20,
   },
+  // Kort og annoncer
   card: {
     backgroundColor: Farver.kort,
     borderColor: Farver.kant,
@@ -205,6 +208,7 @@ export const GS = StyleSheet.create({
     fontWeight: "800",
     color: Farver.primær,
   },
+  // Formular
   row: {
     marginBottom: 12,
   },

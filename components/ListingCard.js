@@ -2,6 +2,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import { GS } from "../styles/GlobalStyle";
 
 export default function ListingCard({ listing, onPress }) {
+  // kan både bruge lokale billeder og online billede-links.
   const imageSource = listing.image || (listing.imageUrl ? { uri: listing.imageUrl } : null);
 
   return (

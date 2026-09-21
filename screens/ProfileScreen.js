@@ -6,6 +6,7 @@ import { GS } from "../styles/GlobalStyle";
 const MY_NAME = "Daniel";
 
 export default function ProfileScreen() {
+  // Viser kun de annoncer, som tilhører den aktuelle mock-bruger.
   const myListings = LISTINGS.filter((listing) => listing.seller === MY_NAME);
 
   return (
@@ -16,6 +17,7 @@ export default function ProfileScreen() {
         <Text style={GS.sectionTitle}>Mine aktive annoncer: {myListings.length}</Text>
 
         <View style={GS.simpleListBox}>
+          {/* Simpel liste ligesom i ListProject-øvelsen. */}
           <FlatList
             data={myListings}
             keyExtractor={(item) => item.id}

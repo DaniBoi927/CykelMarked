@@ -1,3 +1,4 @@
+// Midlertidige annoncer, så appen kan vises uden Firebase endnu.
 export const LISTINGS = [
   {
     id: "1",

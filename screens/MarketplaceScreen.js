@@ -15,6 +15,7 @@ export default function MarketplaceScreen({ navigation }) {
 
   return (
     <SafeAreaView style={GS.container}>
+      {/* FlatList viser alle annoncerne som en scroll-bar liste. */}
       <FlatList
         data={filteredListings}
         keyExtractor={(item) => item.id}
