@@ -51,6 +51,7 @@ export default function SellItemScreen() {
         <Text style={GS.subtitle}>Opret en annonce for dit brugte cykeltøj eller udstyr.</Text>
 
         {Object.keys(initialState).map((key) => (
+          // Formularen bliver lavet ud fra felterne i initialState.
           <View style={GS.row} key={key}>
             <Text style={GS.label}>{labels[key]}</Text>
             <TextInput
@@ -64,6 +65,7 @@ export default function SellItemScreen() {
           </View>
         ))}
 
+        {/* Knappen validerer formularen og nulstiller felterne. */}
         <AppButton title="Opret annonce" onPress={submitListing} />
       </ScrollView>
     </SafeAreaView>

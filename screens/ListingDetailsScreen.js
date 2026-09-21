@@ -45,6 +45,7 @@ export default function ListingDetailsScreen({ route }) {
           <Text>{listing.description}</Text>
         </View>
 
+        {/* Mock-knap der viser hvor kontakt-funktionen senere kan bygges. */}
         <AppButton title="Kontakt sælger" onPress={() => {}} />
       </ScrollView>
     </SafeAreaView>

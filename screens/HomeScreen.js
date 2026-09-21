@@ -7,6 +7,7 @@ export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaView style={GS.container}>
       <ScrollView contentContainerStyle={GS.homeScreen}>
+        {/* Her forklarer jeg kort appens funktion på forsiden. */}
         <View style={GS.hero}>
           <Text style={GS.heroTitle}>Cykel Marked</Text>
           <Text style={GS.heroText}>
@@ -41,6 +42,7 @@ export default function HomeScreen({ navigation }) {
           </View>
         </View>
 
+        {/* Knappen sender brugeren videre til annoncesiden. */}
         <AppButton title="Tryk for at se annoncer" onPress={() => navigation.navigate("Køb")} />
       </ScrollView>
     </SafeAreaView>

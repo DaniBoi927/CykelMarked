@@ -7,6 +7,8 @@ import { GS } from "../styles/GlobalStyle";
 
 export default function MarketplaceScreen({ navigation }) {
   const [search, setSearch] = useState("");
+
+  // Søger i de vigtigste felter på hver annonce.
   const query = search.trim().toLocaleLowerCase("da-DK");
   const filteredListings = LISTINGS.filter((listing) =>
     [listing.title, listing.category, listing.description, listing.location, listing.size]
@@ -24,6 +26,7 @@ export default function MarketplaceScreen({ navigation }) {
           <>
             <Text style={GS.title}>Annoncer</Text>
             <Text style={GS.subtitle}>Find brugt cykeltøj og udstyr nær dig.</Text>
+            {/* Inputfeltet filtrerer listen mens brugeren skriver. */}
             <TextInput
               style={GS.input}
               placeholder="Søg i annoncer"
@@ -39,6 +42,7 @@ export default function MarketplaceScreen({ navigation }) {
         renderItem={({ item }) => (
           <ListingCard
             listing={item}
+            // Tryk på en annonce åbner detaljesiden for annoncen.
             onPress={() => navigation.navigate("Listing Details", { listing: item })}
           />
         )}

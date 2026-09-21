@@ -12,6 +12,7 @@ export default function ProfileScreen() {
   return (
     <SafeAreaView style={GS.container}>
       <View style={GS.simpleListScreen}>
+        {/* Profilen viser brugerens egne aktive annoncer. */}
         <Text style={GS.title}>Profil</Text>
         <Text style={GS.subtitle}>{MY_NAME} • Cykelrytter • København</Text>
         <Text style={GS.sectionTitle}>Mine aktive annoncer: {myListings.length}</Text>
